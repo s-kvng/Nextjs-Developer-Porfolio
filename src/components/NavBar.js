@@ -2,7 +2,11 @@ import React from 'react';
 
 const NavBar = () => {
   return (
-    <div>NavBar</div>
+    <header className=" w-full px-32 py-8 font-medium">
+        <nav>
+            kjd
+        </nav>
+    </header>
   )
 }
 
