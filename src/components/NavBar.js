@@ -5,6 +5,17 @@ import React from 'react';
 import Logo from './Logo';
 import { useRouter } from 'next/router';
 
+/* 
+  window.addEventListener("scroll", function () {
+      if (window.pageYOffset > 0) {
+        navbar.classList.add("navbar-after-scroll");
+      }
+      else {
+        navbar.classList.remove("navbar-after-scroll");
+      }
+    })
+*/
+
 //icons
 import  { TwitterIcon ,GithubIcon, DribbleIcon, LinkedInIcon  } from './icons'
 
@@ -62,7 +73,7 @@ const NavBar = () => {
        
         <nav className=' flex items-center justify-center flex-wrap gap-x-10'>
              {iconsLinks.map((iconLink, index)=>(
-              <motion.a className='w-6' href={iconLink.href} target={iconLink.target} whileHover={{ y:-2}} whileTap={{scale:0.9}}>  
+              <motion.a className='w-6' href={iconLink.href} target={iconLink.target} whileHover={{ y:-4}} whileTap={{scale:0.9}}>  
                   {iconLink.icons}
               </motion.a>
              ))}
