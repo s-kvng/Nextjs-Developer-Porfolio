@@ -5,6 +5,12 @@ import React from 'react';
 import Logo from './Logo';
 import { useRouter } from 'next/router';
 
+//icons
+import  { TwitterIcon ,GithubIcon, DribbleIcon, LinkedInIcon  } from './icons'
+
+//
+import{ motion } from 'framer-motion';
+
 //nav links
 const links = [
   {name : "Home",href : "/" ,className: "mr-4"},
@@ -15,12 +21,12 @@ const links = [
 
 //nav icons
 const iconsLinks = [
-  {icons : "T", target : "_blank" , href: "/" },
-  {icons : "T", target : "_blank" , href: "/" },
-  {icons : "T", target : "_blank" , href: "/" },
-  {icons : "T", target : "_blank" , href: "/" },
-  {icons : "T", target : "_blank" , href: "/" },
-  {icons : "T", target : "_blank" , href: "/" },
+  {icons :  <TwitterIcon /> , target : "_blank" , href: "/" },
+  {icons :<GithubIcon />, target : "_blank" , href: "/" },
+  {icons : <DribbleIcon/>, target : "_blank" , href: "/" },
+  {icons : <LinkedInIcon />, target : "_blank" , href: "/" },
+  // {icons : "T", target : "_blank" , href: "/" },
+  // {icons : "T", target : "_blank" , href: "/" },
 ]
 
 //
@@ -41,7 +47,8 @@ const CustomLink = ({ name , href , className }) => {
     </Link>
   )
 }
-
+ // {icons : "T", target : "_blank" , href: "/" },
+  // {icons : "T", target : "_blank" , href: "/" },
 
 const NavBar = () => {
   return (
@@ -53,17 +60,18 @@ const NavBar = () => {
             ))}
         </nav>
        
-        <nav>
+        <nav className=' flex items-center justify-center flex-wrap gap-x-10'>
              {iconsLinks.map((iconLink, index)=>(
-              <Link href={iconLink.href} target={iconLink.target}>  
+              <motion.a className='w-6' href={iconLink.href} target={iconLink.target} whileHover={{ y:-2}} whileTap={{scale:0.9}}>  
                   {iconLink.icons}
-              </Link>
+              </motion.a>
              ))}
         </nav>
-
+          
         <div className=" absolute left-[50%] top-2 translate-x-[50%]">
           <Logo />
         </div>
+        
     </header>
   )
 }
