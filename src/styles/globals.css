@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.blue__gradient{
+    background: linear-gradient(180deg, rgba(188,165, 255, 0) 10%, #214d76 100% );
+
+}
+
+.bg-blue-gradient{
+    background: linear-gradient(157.81deg, #def9fa 25%,#c0f0f1 31.24% ,#a4ebee 52.19%,#a7e7e9 69.82%,#b9ecee 81.94%,#bbe1e7 100% );
+}
+
+/* .logo-gradient{
+    color: linear-gradient(180deg , #e6e6e6 0%, #3939af 100%);
+} */
+
+
+.box-shadow{
+    box-shadow: 0px 20px 100px -10px rgba(66, 71 , 91 , 0.1);
+}
