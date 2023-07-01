@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //
 import { animate, motion } from "framer-motion";
+
+
 
 const quote = {
   initial: {
@@ -30,7 +32,14 @@ const singleWord = {
     },
   };
 
+
+
+  
+
 const AnimatedText = ({ text, className = "" }) => {
+
+ 
+
   return (
     <div className="flex items-center justify-center text-center w-full mx-auto py-2 overflow-hidden">
       <motion.hi
@@ -40,10 +49,12 @@ const AnimatedText = ({ text, className = "" }) => {
         animate="animate"
       >
         {text.split(" ").map((word, index) => (
-          <motion.span key={`${word}-${index}`} className={`inline-block text-gradient`} variants={singleWord}>
+          <motion.span key={`${word}-${index}`} className={`inline-block text-gradient `} variants={singleWord}>
             {word}&nbsp;
+           
           </motion.span>
         ))}
+         
       </motion.hi>
     </div>
   );

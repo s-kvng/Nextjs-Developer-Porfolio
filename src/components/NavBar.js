@@ -1,26 +1,17 @@
 import Link from 'next/link';
-import React from 'react';
+import React ,{ useEffect , useState  } from 'react';
 
 //components
 import Logo from './Logo';
 import { useRouter } from 'next/router';
-
-/* 
-  window.addEventListener("scroll", function () {
-      if (window.pageYOffset > 0) {
-        navbar.classList.add("navbar-after-scroll");
-      }
-      else {
-        navbar.classList.remove("navbar-after-scroll");
-      }
-    })
-*/
+ 
 
 //icons
 import  { TwitterIcon ,GithubIcon, DribbleIcon, LinkedInIcon  } from './icons'
 
-//
+//animation
 import{ motion } from 'framer-motion';
+
 
 //nav links
 const links = [
@@ -44,7 +35,7 @@ const iconsLinks = [
 const CustomLink = ({ name , href , className }) => {
 
   const router  = useRouter();
-  console.log(router.asPath === href)
+     
 
   return (
     <Link href={href} className={`${className} relative group`}>
@@ -61,9 +52,45 @@ const CustomLink = ({ name , href , className }) => {
  // {icons : "T", target : "_blank" , href: "/" },
   // {icons : "T", target : "_blank" , href: "/" },
 
+
+
+
 const NavBar = () => {
+
+  const [hasShadow , setHasShadow] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  //
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY || 0);
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
+
+  //
+  useEffect(() => {
+    if (scrollY > 0) {
+      setHasShadow(true);
+    } else {
+      setHasShadow(false);
+    }
+  }, [scrollY]);
+
+  
+
   return (
-    <header className=" w-full px-32 py-8 font-medium flex justify-between items-center">
+    <header className={`nav w-full px-32 py-8 font-medium flex justify-between items-center fixed top-0 z-50 ${hasShadow && "shadow-lg"}`}>
         <nav>
             {links.map((link, index)=>(
                <CustomLink key={index} href={link.href} name={link.name} className={link.className} />
