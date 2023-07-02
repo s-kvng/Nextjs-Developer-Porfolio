@@ -1,5 +1,6 @@
 //components
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 //styles
 import "@/styles/globals.css";
 //fonts
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       >
         <NavBar />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </>
   );

@@ -100,7 +100,7 @@ const NavBar = () => {
        
         <nav className=' flex items-center justify-center flex-wrap gap-x-10'>
              {iconsLinks.map((iconLink, index)=>(
-              <motion.a className='w-6' href={iconLink.href} target={iconLink.target} whileHover={{ y:-4}} whileTap={{scale:0.9}}>  
+              <motion.a key={index} className='w-6' href={iconLink.href} target={iconLink.target} whileHover={{ y:-4}} whileTap={{scale:0.9}}>  
                   {iconLink.icons}
               </motion.a>
              ))}
