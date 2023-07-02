@@ -38,7 +38,7 @@ const CustomLink = ({ name , href , className }) => {
      
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} capitalize relative group`}>
         {name}
 
         <span 

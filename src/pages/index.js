@@ -19,6 +19,7 @@ import ProfilePic from "../../public/images/profile/port3.png";
 //components
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
+import HireMe from "@/components/HireMe";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,6 +70,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <HireMe />
       </main>
     </>
   );
