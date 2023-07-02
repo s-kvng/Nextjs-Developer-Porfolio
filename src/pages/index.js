@@ -10,10 +10,11 @@ import Typed from "typed.js";
 
 import Link from "next/link";
 
-
+//icons
+import { LinkArrow } from "@/components/icons";
 
 //
-import ProfilePic from "../../public/images/profile/developer-pic-1.png";
+import ProfilePic from "../../public/images/profile/port3.png";
 
 //components
 import Layout from "@/components/Layout";
@@ -55,11 +56,13 @@ export default function Home() {
                 projects and articles, showcasing my expertise in React.js and
                 web development.
               </p>
-                <div className="flex items-center self-start"> 
-                  <Link href="/dummy" target={"_blank"} className=" bg-gray-900 text-white p-3 rounded-md">
-                    Resume
+                <div className="flex items-center self-start gap-x-4"> 
+                  <Link href="/dummy.pdf" target={"_blank"} download={true}
+                    className=" bg-gray-900 text-white text-lg font-semibold p-3 rounded-lg shadow-sm hover:bg-gray-800 flex items-center ">
+                    Resume <LinkArrow className="w-7 ml-1" />
+                    
                   </Link>
-                  <Link href="kvngnathan8420@gmail.com" className="">
+                  <Link href="kvngnathan8420@gmail.com" className=" capitalize font-semibold text-lg underline">
                     Contact
                   </Link>
                 </div>

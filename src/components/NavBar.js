@@ -90,7 +90,7 @@ const NavBar = () => {
   
 
   return (
-    <header className={`nav w-full px-32 py-8 font-medium flex justify-between items-center fixed top-0 z-50 ${hasShadow && "shadow-lg"}`}>
+    <header className={`nav w-full px-32 py-8 font-medium flex justify-between items-center fixed top-0 z-50 ${hasShadow && "shadow-lg bg-gradient-to-tl from-sky-200 from-30% via-sky-300 to-sky-400"}`}>
         <nav>
             {links.map((link, index)=>(
                <CustomLink key={index} href={link.href} name={link.name} className={link.className} />
