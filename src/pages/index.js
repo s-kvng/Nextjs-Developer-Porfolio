@@ -13,13 +13,15 @@ import Link from "next/link";
 //icons
 import { LinkArrow } from "@/components/icons";
 
-//
+//images
 import ProfilePic from "../../public/images/profile/port3.png";
+
 
 //components
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import HireMe from "@/components/HireMe";
+import AnimatedLightbulb from "@/components/AnimatedLightbulb";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,14 +65,17 @@ export default function Home() {
                     Resume <LinkArrow className="w-7 ml-1" />
                     
                   </Link>
-                  <Link href="kvngnathan8420@gmail.com" className=" capitalize font-semibold text-lg underline">
+                  <Link href="kvngnathan8420@gmail.com" className=" capitalize font-semibold text-lg underline underline-offset-4">
                     Contact
                   </Link>
                 </div>
             </div>
           </div>
         </Layout>
+
         <HireMe />
+
+        <AnimatedLightbulb/>
       </main>
     </>
   );
