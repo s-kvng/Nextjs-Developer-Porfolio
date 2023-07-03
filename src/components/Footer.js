@@ -10,7 +10,7 @@ const Footer = () => {
 
             <span className=' capitalize'>{ new Date().getFullYear()} &copy; All rights reserved.</span>
             <Link href="#">Built with <span className=' text-pink-500 text-xl'>&#9825;</span> By&nbsp; <span className=''> s-kvng </span> </Link>
-            <div href="#">Dont be shy to say <Link href="#" target={`_blank`}><span className='underline'>Hi!</span></Link></div>
+            <div href="#">Dont be shy to say <Link href="#" target={`_blank`}><span className='underline underline-offset-4'>Hi!</span></Link></div>
         </Layout>
 
     </footer>
