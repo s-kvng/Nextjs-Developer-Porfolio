@@ -6,7 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 //image
-import profile from "../../../public/images/profile/developer-pic-2.jpg"
+import profile from "../../../public/images/profile/developer-pic-2.jpg";
 
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
           <AnimatedText text={`Passion Fuels Purpose!`} className="mb-14" />
 
           <div className=" grid grid-cols-8 gap-4">
-            <div className=" col-span-3">
+            <div className=" col-span-3 flex flex-col items-start justify-start px-3">
               <h2 className=" text-lg font-bold mb-4 uppercase">Biography</h2>
               <p className=" font-medium">
                 Hi, I'm CodeBucks, a web developer and UI/UX designer with a
@@ -44,7 +44,17 @@ const About = () => {
               </p>
             </div>
 
-           
+            <div
+              className=" col-span-3 relative h-max w-full border-2 border-solid
+             border-black rounded-2xl p-8 bg-white "
+            >
+              <div className=" absolute top-0 -right-3 bg-black -z-10 w-[102%] h-[103%] rounded-[2rem] " />
+              <Image
+                src={profile}
+                alt="profile"
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
           </div>
         </Layout>
       </main>
