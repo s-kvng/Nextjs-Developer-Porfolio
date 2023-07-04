@@ -53,7 +53,7 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center  h-[100%]">
            
               <AnimatedText text={" I am a full stack developer"} className=" py-7 !text-6xl !text-left pl-0"/>
-              <p className="my-2 text-base font-medium ">
+              <p className="my-2 text-base font-medium mb-2">
                 As a skilled full-stack <span className="developerText">Developer</span>, I am dedicated to turning
                 ideas into innovative web applications. Explore my latest
                 projects and articles, showcasing my expertise in React.js and
