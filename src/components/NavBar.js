@@ -33,14 +33,10 @@ const iconsLinks = [
 
 //
 const CustomLink = ({ name , href , className }) => {
-
   const router  = useRouter();
-     
-
   return (
-    <Link href={href} className={`${className} capitalize relative group`}>
+    <Link href={ href } onClick={() => {router.asPath === href && window.scrollTo(2 , 2)} } className={`${className} capitalize relative group`}>
         {name}
-
         <span 
           className={`h-[1px] bg-black inline-block absolute left-0 -bottom-0.5 
           group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? "w-full" : "w-0"}`}>
