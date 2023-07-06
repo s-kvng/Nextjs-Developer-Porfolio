@@ -1,5 +1,6 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
@@ -96,6 +97,7 @@ const About = () => {
                 </div>
               </div>
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
