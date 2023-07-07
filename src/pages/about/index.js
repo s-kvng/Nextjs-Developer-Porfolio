@@ -42,7 +42,7 @@ const About = () => {
         <meta name="description" content="any description" />
       </Head>
 
-      <main className="flex flex-col w-full py-32">
+      <main className="flex flex-col w-full py-32 bg-[#f5f5f5]">
         <Layout className=" pt-14  px-32">
           <AnimatedText text={`Passion Fuels Purpose!`} className="mb-14" />
 
