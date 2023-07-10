@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
@@ -9,6 +10,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import profile from "../../../public/images/profile/developer-pic-2.jpg";
+
 
 //Numbers animation
 const AnimateNumber = ({value}) => {
@@ -98,6 +100,7 @@ const About = () => {
               </div>
           </div>
           <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
