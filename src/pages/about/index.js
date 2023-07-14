@@ -10,31 +10,31 @@ import Head from "next/head";
 import Image from "next/image";
 
 import profile from "../../../public/images/profile/developer-pic-2.jpg";
-
+import Tech from "@/components/Tech";
 
 //Numbers animation
-const AnimateNumber = ({value}) => {
+const AnimateNumber = ({ value }) => {
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration : 3000 })
-  const isInView = useInView(ref, { once : true })
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView(ref, { once: true });
 
-  useEffect(()=>{
-    if(isInView){
-      motionValue.set(value)
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
     }
-  },[isInView , value , motionValue])
+  }, [isInView, value, motionValue]);
 
-  useEffect(()=>{
+  useEffect(() => {
     springValue.on("change", (latest) => {
-      if(ref.current && latest.toFixed(0) <= value){
+      if (ref.current && latest.toFixed(0) <= value) {
         ref.current.textContent = latest.toFixed(0);
       }
-    })
-  },[ springValue , value ])
+    });
+  }, [springValue, value]);
 
-  return <span className="" ref={ref}></span>
-}
+  return <span className="" ref={ref}></span>;
+};
 
 const About = () => {
   return (
@@ -84,23 +84,36 @@ const About = () => {
               />
             </div>
 
-              <div className=" col-span-2 flex flex-col items-end justify-between">
-                <div className="flex flex-col items-end justify-between">
-                  <span className=" inline-block text-6xl font-bold"><AnimateNumber value={10}/>+</span>
-                  <h2 className=" text-xl font-meduim capitalize text-dark/75">Satisfied Clients</h2>
-                </div>
-                <div className="flex flex-col items-end justify-between">
-                  <span className=" text-6xl font-bold"><AnimateNumber value={20}/>+</span>
-                  <h2 className=" text-xl font-meduim capitalize text-dark/75">Projects completed</h2>
-                </div>
-                <div className="flex flex-col items-end justify-between">
-                  <span className=" text-6xl font-bold"><AnimateNumber value={2}/>+</span>
-                  <div className=" text-xl font-meduim capitalize text-dark/75">Years of experience</div>
+            <div className=" col-span-2 flex flex-col items-end justify-between">
+              <div className="flex flex-col items-end justify-between">
+                <span className=" inline-block text-6xl font-bold">
+                  <AnimateNumber value={10} />+
+                </span>
+                <h2 className=" text-xl font-meduim capitalize text-dark/75">
+                  Satisfied Clients
+                </h2>
+              </div>
+              <div className="flex flex-col items-end justify-between">
+                <span className=" text-6xl font-bold">
+                  <AnimateNumber value={20} />+
+                </span>
+                <h2 className=" text-xl font-meduim capitalize text-dark/75">
+                  Projects completed
+                </h2>
+              </div>
+              <div className="flex flex-col items-end justify-between">
+                <span className=" text-6xl font-bold">
+                  <AnimateNumber value={2} />+
+                </span>
+                <div className=" text-xl font-meduim capitalize text-dark/75">
+                  Years of experience
                 </div>
               </div>
+            </div>
           </div>
           <Skills />
           <Experience />
+          <Tech />
         </Layout>
       </main>
     </>
