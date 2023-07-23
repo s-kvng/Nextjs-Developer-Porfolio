@@ -4,7 +4,7 @@ import React from "react";
 const Projects = () => {
   return (
     <>
-      <main className="flex flex-col w-full py-32 bg-[#f5f5f5]">
+      <main className="flex flex-col items-center justify-cente px-32 w-full py-32 bg-[#551e1e]">
         <Tabs />
       </main>
     </>

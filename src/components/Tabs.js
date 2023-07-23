@@ -12,14 +12,28 @@ export default function Tabs() {
         id: 1,
         title: "Does drinking coffee make you smarter?",
         date: "5h ago",
-        commentCount: 5,
+        github: 5,
         shareCount: 2,
       },
       {
         id: 2,
         title: "So you've bought coffee... now what?",
         date: "2h ago",
-        commentCount: 3,
+        github: 3,
+        shareCount: 2,
+      },
+      {
+        id: 3,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        github: 3,
+        shareCount: 2,
+      },
+      {
+        id: 4,
+        title: "So you've bought coffee... now what?",
+        date: "2h ago",
+        github: 3,
         shareCount: 2,
       },
     ],
@@ -28,14 +42,14 @@ export default function Tabs() {
         id: 1,
         title: "Is tech making coffee better or worse?",
         date: "Jan 7",
-        commentCount: 29,
+        github: 29,
         shareCount: 16,
       },
       {
         id: 2,
         title: "The most innovative things happening in coffee",
         date: "Mar 19",
-        commentCount: 24,
+        github: 24,
         shareCount: 12,
       },
     ],
@@ -44,14 +58,14 @@ export default function Tabs() {
         id: 1,
         title: "Ask Me Anything: 10 answers to your questions about coffee",
         date: "2d ago",
-        commentCount: 9,
+        github: 9,
         shareCount: 5,
       },
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
         date: "4d ago",
-        commentCount: 1,
+        github: 1,
         shareCount: 2,
       },
     ],
@@ -60,23 +74,23 @@ export default function Tabs() {
         id: 1,
         title: "Ask Me Anything: 10 answers to your questions about coffee",
         date: "2d ago",
-        commentCount: 9,
+        github: 9,
         shareCount: 5,
       },
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
         date: "4d ago",
-        commentCount: 1,
+        github: 1,
         shareCount: 2,
       },
     ],
   });
 
   return (
-    <div className="w-full max-w-md px-2 py-16 sm:px-0">
+    <div className="w-full flex flex-col  px-2 py-16 sm:px-0 bg-blue-500">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+        <Tab.List className="flex space-x-1 self-center rounded-xl bg-blue-900/20 p-1 w-1/2">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
@@ -94,43 +108,20 @@ export default function Tabs() {
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="mt-2">
+        <Tab.Panels className="mt-14">
           {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-white p-3",
+                "rounded-xl bg-white py-3 px-10",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
-              <ul>
+              <div className=" grid grid-cols-3 text-white gap-20">
                 {posts.map((post) => (
-                  <li
-                    key={post.id}
-                    className="relative rounded-md p-3 hover:bg-gray-100"
-                  >
-                    <h3 className="text-sm font-medium leading-5">
-                      {post.title}
-                    </h3>
-
-                    <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500">
-                      <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
-                    </ul>
-
-                    <a
-                      href="#"
-                      className={classNames(
-                        "absolute inset-0 rounded-md",
-                        "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
-                      )}
-                    />
-                  </li>
+                  <div className=" bg-black">{post.title}</div>
                 ))}
-              </ul>
+              </div>
             </Tab.Panel>
           ))}
         </Tab.Panels>
