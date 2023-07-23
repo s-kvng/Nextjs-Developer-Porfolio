@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "@react-three/drei": "^9.78.1",
     "@react-three/fiber": "^8.13.4",
     "eslint": "8.36.0",

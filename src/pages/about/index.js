@@ -113,7 +113,6 @@ const About = () => {
           </div>
           <Skills />
           <Experience />
-          <Tech />
         </Layout>
       </main>
     </>

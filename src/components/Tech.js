@@ -4,10 +4,9 @@ import { technologies } from "@/constants";
 
 const Tech = () => {
   return (
-    <div className="mt-20 flex flex-wrap justify-center gap-10">
+    <div className="mt-20 flex flex-wrap justify-center gap-10 bg-gray-950">
       {technologies.map((tech) => (
         <div className="h-28 w-28" key={tech.name}>
-          {console.log(tech.name, " ", tech.icon.src)}
           <BallCanvas icon={tech.icon.src} />
         </div>
       ))}
