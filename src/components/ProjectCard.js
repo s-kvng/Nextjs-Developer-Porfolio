@@ -7,7 +7,7 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
   return (
     <div className=" bg-black h-64 min-h-64 max-h-64 rounded-xl">
       <Link href={link} target="_blank">
-        <Image src={img} alt={title} />
+        <Image src={img} alt="profile" className="w-full h-auto rounded-xl" />
       </Link>
 
       <div>
@@ -16,9 +16,10 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
           <h2>{title}</h2>
         </Link>
         <p>{summary}</p>
-        <div>
+
+        <div className="flex">
           <Link href={github} target="_blank">
-            <GithubIcon />
+            <GithubIcon className="w-6" />
           </Link>
           <Link href={link} target="_blank">
             Visit Project

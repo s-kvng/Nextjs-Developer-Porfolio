@@ -8,13 +8,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Tabs() {
+export default function Tabs({ projPic1 }) {
+  console.log("first => ", Project1.src);
+
   let [categories] = useState({
     React: [
       {
         id: 1,
         title: "Does drinking coffee make you smarter?",
-        img: { Project1 },
+        img: Project1,
         date: "5h ago",
         github: 5,
         shareCount: 2,
@@ -22,7 +24,7 @@ export default function Tabs() {
       {
         id: 2,
         title: "So you've bought coffee... now what?",
-        img: { Project1 },
+        img: Project1,
         date: "2h ago",
         github: 3,
         shareCount: 2,
@@ -30,6 +32,7 @@ export default function Tabs() {
       {
         id: 3,
         title: "So you've bought coffee... now what?",
+        img: Project1,
         date: "2h ago",
         github: 3,
         shareCount: 2,
@@ -37,7 +40,7 @@ export default function Tabs() {
       {
         id: 4,
         title: "So you've bought coffee... now what?",
-        img: { Project1 },
+        img: Project1,
         date: "2h ago",
         github: 3,
         shareCount: 2,
@@ -47,7 +50,7 @@ export default function Tabs() {
       {
         id: 1,
         title: "Is tech making coffee better or worse?",
-        img: { Project1 },
+        img: Project1,
         date: "Jan 7",
         github: 29,
         shareCount: 16,
@@ -55,7 +58,7 @@ export default function Tabs() {
       {
         id: 2,
         title: "The most innovative things happening in coffee",
-        img: { Project1 },
+        img: Project1,
         date: "Mar 19",
         github: 24,
         shareCount: 12,
@@ -65,7 +68,7 @@ export default function Tabs() {
       {
         id: 1,
         title: "Ask Me Anything: 10 answers to your questions about coffee",
-        img: { Project1 },
+        img: Project1,
         date: "2d ago",
         github: 9,
         shareCount: 5,
@@ -73,7 +76,7 @@ export default function Tabs() {
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
-        img: { Project1 },
+        img: Project1,
         date: "4d ago",
         github: 1,
         shareCount: 2,
@@ -83,7 +86,7 @@ export default function Tabs() {
       {
         id: 1,
         title: "Ask Me Anything: 10 answers to your questions about coffee",
-        img: { Project1 },
+        img: Project1,
         date: "2d ago",
         github: 9,
         shareCount: 5,
@@ -91,7 +94,7 @@ export default function Tabs() {
       {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
-        img: { Project1 },
+        img: Project1,
         date: "4d ago",
         github: 1,
         shareCount: 2,
@@ -137,6 +140,7 @@ export default function Tabs() {
                     img={post.img}
                     link="/"
                     github="/"
+                    key={post.id}
                   />
                 ))}
               </div>
