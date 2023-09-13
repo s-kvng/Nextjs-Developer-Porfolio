@@ -85,7 +85,7 @@ export default function Tabs({ projPic1 }) {
     Laravel: [
       {
         id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
+        title: "Ask Me Anything: 20 answers to your questions about coffee",
         img: Project1,
         date: "2d ago",
         github: 9,
