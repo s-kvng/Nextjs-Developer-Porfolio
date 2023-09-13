@@ -77,7 +77,7 @@ export default function Tabs({ projPic1 }) {
         id: 2,
         title: "The worst advice we've ever heard about coffee",
         img: Project1,
-        date: "4d ago",
+        date: "40d ago",
         github: 1,
         shareCount: 2,
       },
