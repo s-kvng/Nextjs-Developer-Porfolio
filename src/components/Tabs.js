@@ -105,7 +105,7 @@ export default function Tabs({ projPic1 }) {
   return (
     <div className="w-full flex flex-col  px-2 py-[27px] sm:px-0 bg-blue-500">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 self-center rounded-xl bg-blue-900/20 p-1 w-1/2">
+        <Tab.List className="flex space-x-1 self-center rounded-xl bg-blue-900/20 p-1 lg:w-1/2 w-full">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
@@ -128,11 +128,11 @@ export default function Tabs({ projPic1 }) {
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-white h-72 overflow-y-scroll py-3 px-10",
+                "rounded-xl bg-white h-72 overflow-y-scroll py-3 px-10 ",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
-              <div className=" grid grid-cols-3 text-white gap-20">
+              <div className=" grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1  text-white gap-20">
                 {posts.map((post) => (
                   <ProjectCard
                     post={post}

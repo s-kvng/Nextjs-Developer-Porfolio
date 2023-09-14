@@ -11,7 +11,7 @@ const Projects = () => {
         <title>Nathaniel | Projects</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="flex flex-col items-center justify-cente px-32 w-full pt-24 pb-5 bg-[#551e1e]">
+      <main className="flex flex-col items-center justify-cente md:px-32 px-3 w-full pt-24 pb-5 bg-[#551e1e] ">
         <Tabs />
       </main>
     </>
