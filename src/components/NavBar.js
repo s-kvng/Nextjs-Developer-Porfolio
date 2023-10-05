@@ -50,7 +50,7 @@ const CustomLink = ({ name, href, className }) => {
     >
       {name}
       <span
-        className={`h-[1px] bg-black inline-block absolute left-0 -bottom-0.5 
+        className={`h-[1px] bg-black dark:bg-white inline-block absolute left-0 -bottom-0.5 
           group-hover:w-full transition-[width] ease duration-300 ${
             router.asPath === href ? "w-full" : "w-0"
           }`}
@@ -96,9 +96,9 @@ const NavBar = () => {
 
   return (
     <header
-      className={`nav w-full px-32 py-8 font-medium flex justify-between items-center fixed top-0 z-50 ${
+      className={`nav w-full px-32 py-8 font-medium flex justify-between items-center fixed top-0 z-50 dark:bg-dark dark:text-white ${
         hasShadow &&
-        "shadow-lg bg-gradient-to-tl from-sky-200 from-30% via-sky-300 to-sky-400"
+        "shadow-lg dark:bg-gradient-to-tl dark:from-zinc-700 dark:from-30% dark:via-zinc-800 dark:to-dark bg-gradient-to-tl from-sky-200 from-30% via-sky-300 to-sky-400 "
       }`}
     >
       <nav>
