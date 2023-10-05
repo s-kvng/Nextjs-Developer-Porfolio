@@ -5,11 +5,11 @@ import { GithubIcon } from "./icons";
 
 const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
   return (
-    <div
+    <article
       className="relative bg-white h-64 min-h-64 max-h-64 rounded-xl flex flex-col
-     items-center justify-center p-4 border border-solid border-dark text-dark shadow-2xl"
+     items-center justify-center p-4 border border-solid border-dark text-dark shadow-xl shadow-dark"
     >
-      {/* <div className=" absolute top-0 -right-3 bg-black w-[102%] h-[103%] rounded-[2rem] " /> */}
+      {/* <div className=" absolute top-0 -right-3 bg-black w-[102%] h-[103%] rounded-[2rem] -z-[5]" /> */}
 
       <Link href={link} target="_blank">
         <Image src={img} alt="profile" className="w-full h-auto rounded-xl" />
@@ -41,7 +41,7 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

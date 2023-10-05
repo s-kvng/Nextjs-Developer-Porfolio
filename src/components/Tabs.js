@@ -128,11 +128,11 @@ export default function Tabs({ projPic1 }) {
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-white h-72 overflow-y-scroll py-3 px-10 ",
+                "rounded-xl bg-white h-72 overflow-y-scroll py-3 px-10",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
-              <div className=" grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1  text-white gap-20">
+              <div className=" grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1  text-white gap-20 ">
                 {posts.map((post) => (
                   <ProjectCard
                     post={post}
