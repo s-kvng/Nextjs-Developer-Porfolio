@@ -6,10 +6,18 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 
 //icons
-import { TwitterIcon, GithubIcon, DribbleIcon, LinkedInIcon } from "./icons";
+import {
+  TwitterIcon,
+  GithubIcon,
+  DribbleIcon,
+  LinkedInIcon,
+  MoonIcon,
+  SunIcon,
+} from "./icons";
 
 //animation
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 //nav links
 const links = [
@@ -58,6 +66,7 @@ const CustomLink = ({ name, href, className }) => {
 const NavBar = () => {
   const [hasShadow, setHasShadow] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [mode, setMode] = useThemeSwitcher();
 
   //
   useEffect(() => {
@@ -116,6 +125,17 @@ const NavBar = () => {
             {iconLink.icons}
           </motion.a>
         ))}
+        <button
+          onClick={() => {
+            setMode(mode === "light" ? "dark" : "light");
+          }}
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-black"} />
+          ) : (
+            <MoonIcon className={"fill-black"} />
+          )}
+        </button>
       </nav>
 
       <div className=" absolute left-[50%] top-2 translate-x-[50%]">
