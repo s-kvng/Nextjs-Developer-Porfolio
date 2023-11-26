@@ -44,11 +44,14 @@ const About = () => {
         <meta name="description" content="any description" />
       </Head>
 
-      <main className="flex flex-col w-full py-32 bg-[#f5f5f5]">
-        <Layout className=" pt-14  px-32">
-          <AnimatedText text={`Passion Fuels Purpose!`} className="mb-14" />
+      <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5]">
+        <Layout className="pt-20 md:pt-14  md:px-12 sm:px-8 lg:px-32">
+          <AnimatedText
+            text={`Passion Fuels Purpose!`}
+            className="mb-14 md:!text-6xl !text-5xl"
+          />
 
-          <div className=" grid grid-cols-8 gap-4">
+          <div className=" grid grid-cols-1 md:grid-cols-8 gap-4">
             <div className=" col-span-3 flex flex-col items-start justify-start px-3">
               <h2 className=" text-lg font-bold mb-4 uppercase">Biography</h2>
               <p className=" font-medium">
