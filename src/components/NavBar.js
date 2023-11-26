@@ -134,7 +134,7 @@ const NavBar = () => {
 
   return (
     <header
-      className={`nav w-full lg:px-32 px-6 py-8 font-medium flex lg:justify-between items-center fixed top-0 z-50 dark:bg-dark dark:text-white ${
+      className={`nav w-full lg:px-32 px-6 py-8 font-medium flex lg:justify-between items-center fixed top-0 z-40 dark:bg-dark dark:text-white ${
         hasShadow &&
         "shadow-lg dark:bg-gradient-to-tl dark:from-zinc-700 dark:from-30% dark:via-zinc-800 dark:to-dark bg-gradient-to-tl from-sky-200 from-30% via-sky-300 to-sky-400 "
       }`}
@@ -247,7 +247,7 @@ const NavBar = () => {
         </motion.div>
       )}
 
-      <div className=" absolute left-[50%] top-2 translate-x-[50%]">
+      <div className=" absolute md:left-[50%] md:top-2 md:translate-x-[50%] translate-x-[40%] left-[40%] right-auto">
         <Logo />
       </div>
     </header>
