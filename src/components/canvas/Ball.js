@@ -8,7 +8,7 @@ import {
   Preload,
   useTexture,
 } from "@react-three/drei";
-import { BallCanvas } from "./canvas";
+// import { BallCanvas } from "./canvas";
 
 import CanvasLoader from "../Loader";
 
