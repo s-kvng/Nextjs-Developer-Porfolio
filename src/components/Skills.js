@@ -20,8 +20,8 @@ const skillList = [
 const Skills = () => {
   return (
     <>
-      <h2 className="text-7xl font-bold mt-64 w-full text-center">Skills</h2>
-      <div className=" w-full relative h-screen flex  items-center justify-center bg-circularLight ">
+      <h2 className="text-7xl font-bold mt-60 w-full text-center">Skills</h2>
+      <div className=" w-full relative h-screen flex  items-center justify-center bg-circularLight mb-10">
         <motion.div className=" bg-dark p-8 rounded-full text-white font-semibold flex items-center justify-center shadow-sm shadow-dark hover:cursor-pointer"
           whileHover={
             {scale:1.05}

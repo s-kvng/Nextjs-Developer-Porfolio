@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
@@ -9,30 +10,31 @@ import Head from "next/head";
 import Image from "next/image";
 
 import profile from "../../../public/images/profile/developer-pic-2.jpg";
+import Tech from "@/components/Tech";
 
 //Numbers animation
-const AnimateNumber = ({value}) => {
+const AnimateNumber = ({ value }) => {
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration : 3000 })
-  const isInView = useInView(ref, { once : true })
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView(ref, { once: true });
 
-  useEffect(()=>{
-    if(isInView){
-      motionValue.set(value)
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
     }
-  },[isInView , value , motionValue])
+  }, [isInView, value, motionValue]);
 
-  useEffect(()=>{
+  useEffect(() => {
     springValue.on("change", (latest) => {
-      if(ref.current && latest.toFixed(0) <= value){
+      if (ref.current && latest.toFixed(0) <= value) {
         ref.current.textContent = latest.toFixed(0);
       }
-    })
-  },[ springValue , value ])
+    });
+  }, [springValue, value]);
 
-  return <span className="" ref={ref}></span>
-}
+  return <span className="" ref={ref}></span>;
+};
 
 const About = () => {
   return (
@@ -42,12 +44,15 @@ const About = () => {
         <meta name="description" content="any description" />
       </Head>
 
-      <main className="flex flex-col w-full py-32 bg-[#f5f5f5]">
-        <Layout className=" pt-14  px-32">
-          <AnimatedText text={`Passion Fuels Purpose!`} className="mb-14" />
+      <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5]">
+        <Layout className="pt-20 md:pt-14  md:px-12 sm:px-8 lg:px-32">
+          <AnimatedText
+            text={`Passion Fuels Purpose!`}
+            className="mb-14 md:!text-6xl !text-5xl"
+          />
 
-          <div className=" grid grid-cols-8 gap-4">
-            <div className=" col-span-3 flex flex-col items-start justify-start px-3">
+          <div className=" grid w-full grid-cols-8 gap-10 md:gap-4 lg:gap-16">
+            <div className=" col-span-8 md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start px-3 order-2 md:order-none">
               <h2 className=" text-lg font-bold mb-4 uppercase">Biography</h2>
               <p className=" font-medium">
                 Hi, I'm CodeBucks, a web developer and UI/UX designer with a
@@ -71,10 +76,10 @@ const About = () => {
             </div>
 
             <div
-              className=" col-span-3 relative h-max w-full border-2 border-solid
-             border-black rounded-2xl p-8 bg-white "
+              className=" col-span-8 md:col-span-3 lg:col-span-4 relative h-max w-full border-2 border-solid
+             border-black rounded-2xl p-8 bg-white dark:bg-black order-1 md:order-none"
             >
-              <div className=" absolute top-0 -right-3 bg-black -z-10 w-[102%] h-[103%] rounded-[2rem] " />
+              <div className=" absolute top-0 -right-3 bg-black dark:bg-white -z-10 w-[102%] h-[103%] rounded-[2rem] " />
               <Image
                 src={profile}
                 alt="profile"
@@ -82,22 +87,35 @@ const About = () => {
               />
             </div>
 
-              <div className=" col-span-2 flex flex-col items-end justify-between">
-                <div className="flex flex-col items-end justify-between">
-                  <span className=" inline-block text-6xl font-bold"><AnimateNumber value={10}/>+</span>
-                  <h2 className=" text-xl font-meduim capitalize text-dark/75">Satisfied Clients</h2>
-                </div>
-                <div className="flex flex-col items-end justify-between">
-                  <span className=" text-6xl font-bold"><AnimateNumber value={20}/>+</span>
-                  <h2 className=" text-xl font-meduim capitalize text-dark/75">Projects completed</h2>
-                </div>
-                <div className="flex flex-col items-end justify-between">
-                  <span className=" text-6xl font-bold"><AnimateNumber value={2}/>+</span>
-                  <div className=" text-xl font-meduim capitalize text-dark/75">Years of experience</div>
+            <div className=" col-span-8 md:col-span-2 lg:col-span-8 flex flex-row md:flex-col lg:flex-row items-end justify-between order-3 md:order-none">
+              <div className="flex flex-col items-end justify-between">
+                <span className=" inline-block text-4xl md:text-6xl font-bold">
+                  <AnimateNumber value={10} />+
+                </span>
+                <h2 className=" text-sm md:text-xl font-meduim capitalize text-dark/75">
+                  Satisfied Clients
+                </h2>
+              </div>
+              <div className="flex flex-col items-end justify-between">
+                <span className=" text-4xl md:text-6xl font-bold">
+                  <AnimateNumber value={20} />+
+                </span>
+                <h2 className="text-sm md:text-xl font-meduim capitalize text-dark/75">
+                  Projects completed
+                </h2>
+              </div>
+              <div className="flex flex-col items-end justify-between">
+                <span className=" text-4xl md:text-6xl font-bold">
+                  <AnimateNumber value={2} />+
+                </span>
+                <div className="text-sm md:text-xl font-meduim capitalize text-dark/75">
+                  Years of experience
                 </div>
               </div>
+            </div>
           </div>
           <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
