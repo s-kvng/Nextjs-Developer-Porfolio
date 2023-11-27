@@ -51,8 +51,8 @@ const About = () => {
             className="mb-14 md:!text-6xl !text-5xl"
           />
 
-          <div className=" grid grid-cols-1 md:grid-cols-8 gap-4">
-            <div className=" col-span-3 flex flex-col items-start justify-start px-3">
+          <div className=" grid w-full grid-cols-8 gap-10 md:gap-4 lg:gap-16">
+            <div className=" col-span-8 md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start px-3 order-2 md:order-none">
               <h2 className=" text-lg font-bold mb-4 uppercase">Biography</h2>
               <p className=" font-medium">
                 Hi, I'm CodeBucks, a web developer and UI/UX designer with a
@@ -76,10 +76,10 @@ const About = () => {
             </div>
 
             <div
-              className=" col-span-3 relative h-max w-full border-2 border-solid
-             border-black rounded-2xl p-8 bg-white "
+              className=" col-span-8 md:col-span-3 lg:col-span-4 relative h-max w-full border-2 border-solid
+             border-black rounded-2xl p-8 bg-white dark:bg-black order-1 md:order-none"
             >
-              <div className=" absolute top-0 -right-3 bg-black -z-10 w-[102%] h-[103%] rounded-[2rem] " />
+              <div className=" absolute top-0 -right-3 bg-black dark:bg-white -z-10 w-[102%] h-[103%] rounded-[2rem] " />
               <Image
                 src={profile}
                 alt="profile"
@@ -87,28 +87,28 @@ const About = () => {
               />
             </div>
 
-            <div className=" col-span-2 flex flex-col items-end justify-between">
+            <div className=" col-span-8 md:col-span-2 lg:col-span-8 flex flex-row md:flex-col lg:flex-row items-end justify-between order-3 md:order-none">
               <div className="flex flex-col items-end justify-between">
-                <span className=" inline-block text-6xl font-bold">
+                <span className=" inline-block text-4xl md:text-6xl font-bold">
                   <AnimateNumber value={10} />+
                 </span>
-                <h2 className=" text-xl font-meduim capitalize text-dark/75">
+                <h2 className=" text-sm md:text-xl font-meduim capitalize text-dark/75">
                   Satisfied Clients
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-between">
-                <span className=" text-6xl font-bold">
+                <span className=" text-4xl md:text-6xl font-bold">
                   <AnimateNumber value={20} />+
                 </span>
-                <h2 className=" text-xl font-meduim capitalize text-dark/75">
+                <h2 className="text-sm md:text-xl font-meduim capitalize text-dark/75">
                   Projects completed
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-between">
-                <span className=" text-6xl font-bold">
+                <span className=" text-4xl md:text-6xl font-bold">
                   <AnimateNumber value={2} />+
                 </span>
-                <div className=" text-xl font-meduim capitalize text-dark/75">
+                <div className="text-sm md:text-xl font-meduim capitalize text-dark/75">
                   Years of experience
                 </div>
               </div>

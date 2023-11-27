@@ -134,7 +134,7 @@ const NavBar = () => {
 
   return (
     <header
-      className={`nav w-full lg:px-32 px-6 py-8 font-medium flex lg:justify-between items-center fixed top-0 z-40 dark:bg-dark dark:text-white ${
+      className={`nav w-full lg:px-32 px-8 py-8 font-medium flex lg:justify-between items-center fixed top-0 z-40 dark:bg-dark dark:text-white ${
         hasShadow &&
         "shadow-lg dark:bg-gradient-to-tl dark:from-zinc-700 dark:from-30% dark:via-zinc-800 dark:to-dark bg-gradient-to-tl from-sky-200 from-30% via-sky-300 to-sky-400 "
       }`}
