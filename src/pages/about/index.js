@@ -45,7 +45,7 @@ const About = () => {
       </Head>
 
       <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5]">
-        <Layout className="pt-20 md:pt-14  md:px-12 sm:px-8 lg:px-32">
+        <Layout className="pt-8 md:pt-14  md:px-12 px-8 lg:px-32">
           <AnimatedText
             text={`Passion Fuels Purpose!`}
             className="mb-14 md:!text-6xl !text-5xl"
@@ -76,7 +76,7 @@ const About = () => {
             </div>
 
             <div
-              className=" col-span-8 md:col-span-3 lg:col-span-4 relative h-max w-full border-2 border-solid
+              className=" col-span-8 md:col-span-3 lg:col-span-4 relative h-max   border-2 border-solid
              border-black rounded-2xl p-8 bg-white dark:bg-black order-1 md:order-none"
             >
               <div className=" absolute top-0 -right-3 bg-black dark:bg-white -z-10 w-[102%] h-[103%] rounded-[2rem] " />
