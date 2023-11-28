@@ -68,7 +68,7 @@ export default function Home() {
                   download={true}
                   className=" bg-gray-900 text-white text-[14px] md:text-lg font-semibold p-2 md:p-3 rounded-lg shadow-xl hover:bg-gray-800 flex items-center "
                 >
-                  Resume <LinkArrow className="w-7 ml-1" />
+                  Resume <LinkArrow className=" w-4 md:w-7 ml-1" />
                 </Link>
                 <Link
                   href="kvngnathan8420@gmail.com"

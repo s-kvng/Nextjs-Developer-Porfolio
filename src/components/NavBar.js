@@ -233,6 +233,7 @@ const NavBar = () => {
               </motion.a>
             ))}
             <button
+              className="w-8"
               onClick={() => {
                 setMode(mode === "light" ? "dark" : "light");
               }}
