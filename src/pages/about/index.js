@@ -45,13 +45,13 @@ const About = () => {
       </Head>
 
       <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5]">
-        <Layout className="pt-8 md:pt-14  md:px-12 px-8 lg:px-32">
+        <Layout className="pt-8 md:pt-14  md:px-12 px-1 lg:px-32">
           <AnimatedText
             text={`Passion Fuels Purpose!`}
             className="mb-14 md:!text-6xl !text-5xl"
           />
 
-          <div className=" grid w-full grid-cols-8 gap-10 md:gap-4 lg:gap-16">
+          <div className=" grid w-full grid-cols-8 gap-10 md:gap-4 lg:gap-16 px-2 md:px-0">
             <div className=" col-span-8 md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start px-3 order-2 md:order-none">
               <h2 className=" text-lg font-bold mb-4 uppercase">Biography</h2>
               <p className=" font-medium">
