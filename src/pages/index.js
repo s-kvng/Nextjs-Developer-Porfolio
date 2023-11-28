@@ -2,12 +2,6 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
-//
-import { useEffect } from "react";
-
-//
-import Typed from "typed.js";
-
 import Link from "next/link";
 
 //icons
