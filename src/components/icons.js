@@ -396,7 +396,7 @@ export const GithubIcon = ({ className, ...rest }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
     {...rest}
-    className={`w-full h-auto ${className}`}
+    className={`${className}`}
   >
     <path fill="none" d="M0 0h512v512H0z" />
     <path
@@ -414,7 +414,7 @@ export const LinkArrow = ({ className, ...rest }) => (
     width={14}
     height={14}
     viewBox="0 0 24 24"
-    className={` h-auto ${className}`}
+    className={`md:h-auto ${className}`}
     {...rest}
   >
     <path fill="none" d="M0 0h24v24H0z" />

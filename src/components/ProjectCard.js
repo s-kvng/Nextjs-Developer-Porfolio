@@ -36,7 +36,7 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
             Visit
           </Link>
 
-          <Link href={github} target="_blank" className="w-6">
+          <Link href={github} target="_blank" className="">
             <GithubIcon className=" !w-4 !max-w-[16px] !md:w-8" />
           </Link>
         </div>
