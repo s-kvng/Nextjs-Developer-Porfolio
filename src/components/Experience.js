@@ -13,7 +13,7 @@ import { experiences } from "@/constants";
 
 const ExperienceCard = ({ exp }) => (
   <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
+    contentStyle={{ background: "#000", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
     date={exp.date}
     iconStyle={{ background: exp.iconBg }}
@@ -52,8 +52,11 @@ const ExperienceCard = ({ exp }) => (
 const Experience = () => {
   return (
     <>
-      <AnimatedText text={`Experience`} className="mb-16 mt-20" />
-      <div className="flex flex-col bg-violet-400">
+      <AnimatedText
+        text={`Experience`}
+        className="mb-16 mt-20 !text-5xl md:text-7xl"
+      />
+      <div className="flex flex-col bg-gray-300 dark:bg-dark">
         <VerticalTimeline>
           {experiences.map((exp, index) => (
             <ExperienceCard key={index} exp={exp} />
