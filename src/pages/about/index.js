@@ -44,8 +44,8 @@ const About = () => {
         <meta name="description" content="any description" />
       </Head>
 
-      <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5]">
-        <Layout className="pt-6 md:pt-14  md:px-12 px-1 lg:px-32">
+      <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5] dark:text-white">
+        <Layout className="pt-4 md:pt-14  md:px-12 px-1 lg:px-32">
           <AnimatedText
             text={`Passion Fuels Purpose!`}
             className="mb-14 md:!text-6xl !text-5xl"
@@ -92,7 +92,7 @@ const About = () => {
                 <span className=" inline-block text-4xl md:text-6xl font-bold">
                   <AnimateNumber value={10} />+
                 </span>
-                <h2 className=" text-[11px] md:text-xl font-meduim capitalize text-dark/75">
+                <h2 className=" text-xs md:text-xl font-meduim capitalize text-dark/75 dark:text-gray-300">
                   Satisfied Clients
                 </h2>
               </div>
@@ -100,7 +100,7 @@ const About = () => {
                 <span className=" text-4xl md:text-6xl font-bold">
                   <AnimateNumber value={20} />+
                 </span>
-                <h2 className="text-[11px] md:text-xl font-meduim capitalize text-dark/75">
+                <h2 className="text-xs md:text-xl font-meduim capitalize text-dark/75 dark:text-gray-300">
                   Projects completed
                 </h2>
               </div>
@@ -108,7 +108,7 @@ const About = () => {
                 <span className=" text-4xl md:text-6xl font-bold">
                   <AnimateNumber value={2} />+
                 </span>
-                <div className="text-[11px] md:text-xl font-meduim capitalize text-dark/75">
+                <div className="text-xs md:text-xl font-meduim capitalize text-dark/75 dark:text-gray-300">
                   Years of experience
                 </div>
               </div>
