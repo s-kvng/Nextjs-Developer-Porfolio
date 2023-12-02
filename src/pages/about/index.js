@@ -45,7 +45,7 @@ const About = () => {
       </Head>
 
       <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5] dark:text-white">
-        <Layout className="pt-4 md:pt-14  md:px-12 px-1 lg:px-32">
+        <Layout className="pt-10 md:pt-14  md:px-12 px-1 lg:px-32">
           <AnimatedText
             text={`Passion Fuels Purpose!`}
             className="mb-14 md:!text-6xl !text-5xl"
