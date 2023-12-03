@@ -15,7 +15,7 @@ export default function Tabs({ projPic1 }) {
     React: [
       {
         id: 1,
-        title: "Does drinking coffee make you smarter?",
+        title: "React Porfolio",
         img: Project1,
         date: "5h ago",
         github: 5,
