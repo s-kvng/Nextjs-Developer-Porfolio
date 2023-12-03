@@ -57,7 +57,7 @@ export default function Home() {
               </p>
               <div className="flex items-center lg:self-start gap-x-4 mb-5 md:mb-0 self-center">
                 <Link
-                  href="/dummy.pdf"
+                  href="/Nathaniel.pdf"
                   target={"_blank"}
                   download={true}
                   className=" bg-gray-900 text-white text-[14px] md:text-lg font-semibold p-2 md:p-3 rounded-lg shadow-xl hover:bg-gray-800 flex items-center "
