@@ -7,7 +7,7 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
   return (
     <article
       className="relative bg-white h-64 min-h-64 max-h-64 rounded-xl flex flex-col
-     items-center justify-center p-4 border border-solid border-dark text-dark shadow-xl shadow-dark"
+      justify-center p-4 border border-solid border-dark text-dark shadow-xl shadow-dark"
     >
       {/* <div className=" absolute top-0 -right-3 bg-black w-[102%] h-[103%] rounded-[2rem] -z-[5]" /> */}
 
@@ -26,7 +26,7 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
         </Link>
         <p>{summary}</p>
 
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between">
           <Link
             className=" flex justify-center items-center 
             text-[12px] underline"
