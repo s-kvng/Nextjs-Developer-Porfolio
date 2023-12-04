@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 
 import ProjectCard from "./ProjectCard";
-import Project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import Project1 from "../../public/images/projects/apps4.png";
+import Project2 from "../../public/images/projects/apps3m.png";
+import Project3 from "../../public/images/projects/apps2m.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -16,15 +18,15 @@ export default function Tabs({ projPic1 }) {
       {
         id: 1,
         title: "React Portfolio",
-        img: Project1,
+        img: Project2,
         date: "5h ago",
         github: 5,
         shareCount: 2,
       },
       {
         id: 2,
-        title: "So you've bought coffee... now what?",
-        img: Project1,
+        title: "Pokemon Verse",
+        img: Project3,
         date: "2h ago",
         github: 3,
         shareCount: 2,
