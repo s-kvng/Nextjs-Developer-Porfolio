@@ -21,92 +21,68 @@ export default function Tabs({ projPic1 }) {
         title: "React Portfolio",
         img: Project2,
         date: "5h ago",
-        github: 5,
-        shareCount: 2,
+        github: "https://github.com/s-kvng/Github-Portforlio",
+        link: "/",
       },
       {
         id: 2,
         title: "Pokemon Verse",
         img: Project3,
         date: "2h ago",
-        github: 3,
-        shareCount: 2,
+        github: "https://github.com/s-kvng/Pokemon-verse",
+        link: "https://pokemon-verse.netlify.app/",
       },
       {
         id: 3,
         title: "Xolace(Social Media web app)",
         img: Project1,
         date: "2h ago",
-        github: 3,
-        shareCount: 2,
+        github: "https://github.com/s-kvng/Witstone",
+        link: "http://xolace.online/",
       },
       {
         id: 4,
         title: "Nea-Pixels(Simple E-commerce)",
         img: NeaPixels,
         date: "2h ago",
-        github: 3,
-        shareCount: 2,
+        github: "https://github.com/s-kvng/NEA-Pixels",
+        link: "https://nea-pixels.pycode-camp.com/",
       },
     ],
     Nextjs: [
       {
         id: 1,
-        title: "Is tech making coffee better or worse?",
-        img: Project1,
-        date: "Jan 7",
-        github: 29,
-        shareCount: 16,
-      },
-      {
-        id: 2,
-        title: "The most innovative things happening in coffee",
-        img: Project1,
-        date: "Mar 19",
-        github: 24,
-        shareCount: 12,
+        title: "Nea-Pixels(Simple E-commerce)",
+        img: NeaPixels,
+        date: "2h ago",
+        github: "https://github.com/s-kvng/NEA-Pixels",
+        link: "https://nea-pixels.pycode-camp.com/",
       },
     ],
     Django: [
       {
         id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        img: Project1,
-        date: "2d ago",
-        github: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        img: Project1,
-        date: "40d ago",
-        github: 1,
-        shareCount: 2,
+        title: "Nea-Pixels(Simple E-commerce)",
+        img: NeaPixels,
+        date: "2h ago",
+        github: "https://github.com/s-kvng/NEA-Pixels",
+        link: "https://nea-pixels.pycode-camp.com/",
       },
     ],
     Laravel: [
       {
         id: 1,
-        title: "Ask Me Anything: 20 answers to your questions about coffee",
+        title: "Xolace(Social Media web app)",
         img: Project1,
-        date: "2d ago",
-        github: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        img: Project1,
-        date: "16d ago",
-        github: 1,
-        shareCount: 2,
+        date: "2h ago",
+        github: "",
+        link: "http://xolace.online/",
       },
     ],
   });
 
   return (
-    <div className="w-full flex flex-col  px-2 py-[27px] sm:px-0 bg-blue-500">
+    <div className="w-full flex flex-col  px-2 py-[27px] sm:px-0 bg-blue-500 dark:bg-dark rounded-lg">
       <Tab.Group>
         <Tab.List className="flex space-x-1 self-center rounded-xl bg-blue-900/20 p-1 lg:w-1/2 w-full">
           {Object.keys(categories).map((category) => (
@@ -114,11 +90,11 @@ export default function Tabs({ projPic1 }) {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2 text-sm font-medium leading-5 text-blue-700",
+                  "w-full rounded-lg py-2 text-sm font-medium leading-5 text-blue-700 ",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
-                    ? "bg-white shadow"
-                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white"
+                    ? "bg-white shadow dark:text-black"
+                    : "text-blue-100 hover:bg-white/[0.12] hover:text-white dark:text-white"
                 )
               }
             >
@@ -131,7 +107,7 @@ export default function Tabs({ projPic1 }) {
             <Tab.Panel
               key={idx}
               className={classNames(
-                "rounded-xl bg-white h-72 overflow-y-scroll py-3 px-10",
+                "rounded-xl bg-white dark:bg-dark h-72 overflow-y-scroll py-3 px-10",
                 "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
               )}
             >
@@ -142,7 +118,7 @@ export default function Tabs({ projPic1 }) {
                     title={post.title}
                     img={post.img}
                     link="/"
-                    github="/"
+                    github={post.github}
                     key={post.id}
                   />
                 ))}
