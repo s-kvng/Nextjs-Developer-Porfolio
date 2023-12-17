@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 import Skill from "./Skill";
 
 const skillList = [
-  { name: "HTML", x: "-20vw", y: "-17vw" },
-  { name: "CSS", x: "-3vw", y: "-8vw" },
-  { name: "Javascript", x: "20vw", y: "2vw" },
-  { name: "ReactJS", x: "0vw", y: "12vw" },
-  { name: "NextJS", x: "-10vw", y: "-15vw" },
-  { name: "Tailwindcss", x: "0vw", y: "-20vw" },
+  { name: "HTML", x: "-20vw", y: "-20vw" },
+  { name: "CSS", x: "-5vw", y: "-15vw" },
+  { name: "Javascript", x: "28vw", y: "2vw" },
+  { name: "ReactJS", x: "0vw", y: "21vw" },
+  { name: "NextJS", x: "-20vw", y: "-15vw" },
+  { name: "Tailwindcss", x: "0vw", y: "-22vw" },
   { name: "Bootstrap", x: "15vw", y: "-13vw" },
   { name: "Firebase", x: " -20vw", y: " 2vw" },
-  { name: "Django", x: "0vw", y: " 8vw" },
-  { name: "Laravel", x: "-15vw", y: "14vw" },
+  { name: "Django", x: "0vw", y: " 12vw" },
+  { name: "Laravel", x: "-15vw", y: "18vw" },
 ];
 
 const Skills = () => {

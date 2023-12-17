@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 
 import ProjectCard from "./ProjectCard";
-import Project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import Project1 from "../../public/images/projects/apps4.png";
+import Project2 from "../../public/images/projects/apps3m.png";
+import Project3 from "../../public/images/projects/apps2m.png";
+import NeaPixels from "../../public/images/projects/nea-pixels1.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -15,23 +18,23 @@ export default function Tabs({ projPic1 }) {
     React: [
       {
         id: 1,
-        title: "Does drinking coffee make you smarter?",
-        img: Project1,
+        title: "React Portfolio",
+        img: Project2,
         date: "5h ago",
         github: 5,
         shareCount: 2,
       },
       {
         id: 2,
-        title: "So you've bought coffee... now what?",
-        img: Project1,
+        title: "Pokemon Verse",
+        img: Project3,
         date: "2h ago",
         github: 3,
         shareCount: 2,
       },
       {
         id: 3,
-        title: "So you've bought coffee... now what?",
+        title: "Xolace(Social Media web app)",
         img: Project1,
         date: "2h ago",
         github: 3,
@@ -39,8 +42,8 @@ export default function Tabs({ projPic1 }) {
       },
       {
         id: 4,
-        title: "So you've bought coffee... now what?",
-        img: Project1,
+        title: "Nea-Pixels(Simple E-commerce)",
+        img: NeaPixels,
         date: "2h ago",
         github: 3,
         shareCount: 2,
