@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard";
 import Project1 from "../../public/images/projects/apps4.png";
 import Project2 from "../../public/images/projects/apps3m.png";
 import Project3 from "../../public/images/projects/apps2m.png";
+import NeaPixels from "../../public/images/projects/nea-pixels1.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -33,7 +34,7 @@ export default function Tabs({ projPic1 }) {
       },
       {
         id: 3,
-        title: "So you've bought coffee... now what?",
+        title: "Xolace(Social Media web app)",
         img: Project1,
         date: "2h ago",
         github: 3,
@@ -41,8 +42,8 @@ export default function Tabs({ projPic1 }) {
       },
       {
         id: 4,
-        title: "So you've bought coffee... now what?",
-        img: Project1,
+        title: "Nea-Pixels(Simple E-commerce)",
+        img: NeaPixels,
         date: "2h ago",
         github: 3,
         shareCount: 2,
