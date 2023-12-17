@@ -6,8 +6,9 @@ import { GithubIcon } from "./icons";
 const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
   return (
     <article
-      className="relative bg-white h-64 min-h-64 max-h-64 rounded-xl flex flex-col
-      justify-center p-4 border border-solid border-dark text-dark shadow-xl shadow-dark"
+      className="relative bg-white dark:bg-black dark:text-white h-64 min-h-64 max-h-64 rounded-xl flex flex-col
+      justify-center p-4 border border-solid border-dark text-dark shadow-lg shadow-dark dark:shadow-black transition 
+      duration-500  transform hover:-translate-y-1 hover:shadow-2xl"
     >
       {/* <div className=" absolute top-0 -right-3 bg-black w-[102%] h-[103%] rounded-[2rem] -z-[5]" /> */}
 
@@ -36,7 +37,7 @@ const ProjectCard = ({ post, type, title, summary, img, link, github }) => {
             Visit
           </Link>
 
-          <Link href={github} target="_blank" className="">
+          <Link href={github} target="_blank">
             <GithubIcon className=" !w-4 !max-w-[16px] !md:w-8" />
           </Link>
         </div>
