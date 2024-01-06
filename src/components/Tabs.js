@@ -6,6 +6,7 @@ import Project1 from "../../public/images/projects/apps4.png";
 import Project2 from "../../public/images/projects/apps3m.png";
 import Project3 from "../../public/images/projects/apps2m.png";
 import NeaPixels from "../../public/images/projects/nea-pixels1.png";
+import Bookmark from "../../public/images/projects/bookmark_project.png";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -52,21 +53,21 @@ export default function Tabs({ projPic1 }) {
     Nextjs: [
       {
         id: 1,
-        title: "Nea-Pixels(Simple E-commerce)",
+        title: "Bitbard-blogs",
         img: NeaPixels,
         date: "2h ago",
-        github: "https://github.com/s-kvng/NEA-Pixels",
-        link: "https://nea-pixels.pycode-camp.com/",
+        github: "https://github.com/s-kvng/bitbard-blogs",
+        link: "https://bit-bard-blogs.vercel.app/",
       },
     ],
     Django: [
       {
         id: 1,
-        title: "Nea-Pixels(Simple E-commerce)",
-        img: NeaPixels,
+        title: "Bookmark",
+        img: Bookmark,
         date: "2h ago",
         github: "https://github.com/s-kvng/NEA-Pixels",
-        link: "https://nea-pixels.pycode-camp.com/",
+        link: "#",
       },
     ],
     Laravel: [
@@ -75,7 +76,7 @@ export default function Tabs({ projPic1 }) {
         title: "Xolace(Social Media web app)",
         img: Project1,
         date: "2h ago",
-        github: "",
+        github: "#",
         link: "http://xolace.online/",
       },
     ],
