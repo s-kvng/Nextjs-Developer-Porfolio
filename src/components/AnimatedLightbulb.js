@@ -26,7 +26,7 @@ const AnimatedLightbulb = () => {
   const MotionImage = motion(Image);
 
   return (
-    <div className=" absolute md:bottom-0 md:right-7 w-16 right-5 -bottom-1/4">
+    <div className=" absolute max-md:hidden md:bottom-0 md:right-7 w-16 right-5 -bottom-[20%]">
       <MotionImage
         src={lightBulb}
         alt="s-kvng"
