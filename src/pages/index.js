@@ -57,7 +57,7 @@ export default function Home() {
               </p>
               <div className="flex items-center lg:self-start gap-x-4 mb-5 md:mb-0 self-center">
                 <Link
-                  href="/Nathaniel.pdf"
+                  href="/Nathaniel"
                   target={"_blank"}
                   download={true}
                   className=" bg-gray-900 text-white text-[14px] md:text-lg font-semibold p-2 md:p-3 rounded-lg shadow-xl hover:bg-gray-800 flex items-center "
@@ -65,7 +65,8 @@ export default function Home() {
                   Resume <LinkArrow className=" w-4 md:w-7 h-4 ml-1" />
                 </Link>
                 <Link
-                  href="kvngnathan8420@gmail.com"
+                  href="mailto:nathanieladama8420@gmail.com"
+                  target={`_blank`}
                   className=" capitalize font-semibold text-lg underline underline-offset-4"
                 >
                   Contact

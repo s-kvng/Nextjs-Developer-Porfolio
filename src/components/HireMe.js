@@ -12,7 +12,7 @@ const HireMe = () => {
       <div className=" h-auto md:w-44 w-24 flex overflow-hidden items-center justify-center relative">
         <CircularText className="fill-black animate-spin-slow" />
         <Link
-          href="mailto:kvngnathan8420@gmail.com"
+          href="mailto:nathanieladama8420@gmail.com"
           target={`_blank`}
           className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  bg-black md:h-20 md:w-20 h-12 w-12 rounded-full text-white flex items-center justify-center shadow-lg shadow-dark text-[10px] md:text-lg"
         >

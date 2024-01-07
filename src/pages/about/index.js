@@ -45,7 +45,7 @@ const About = () => {
       </Head>
 
       <main className="flex flex-col w-full py-32 dark:py-0 bg-[#f5f5f5] dark:text-white">
-        <Layout className="pt-10 md:pt-14  md:px-12 px-1 lg:px-32">
+        <Layout className="dark:pt-20 pt-12 md:pt-14  md:px-12 px-1 lg:px-32">
           <AnimatedText
             text={`Passion Fuels Purpose!`}
             className="mb-14 md:!text-6xl !text-5xl"
@@ -55,11 +55,11 @@ const About = () => {
             <div className=" col-span-8 md:col-span-3 lg:col-span-4 flex flex-col items-start justify-start px-3 order-2 md:order-none">
               <h2 className=" text-lg font-bold mb-4 uppercase">Biography</h2>
               <p className=" font-medium">
-                Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with
-                a passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients&apos; visions to life.
+                Hi, I&apos;m Nathaniel, a Full Stack developer and UI/UX
+                designer with a passion for creating beautiful, functional, and
+                user-centered digital experiences. With 3 years of experience in
+                the field. I am always looking for new and innovative ways to
+                bring my clients&apos; visions to life.
               </p>
               <p className=" font-medium my-4">
                 I believe that design is about more than just making things look
