@@ -37,10 +37,22 @@ const mobileLinks = [
 
 //nav icons
 const iconsLinks = [
-  { icons: <TwitterIcon />, target: "_blank", href: "/" },
-  { icons: <GithubIcon />, target: "_blank", href: "/" },
+  {
+    icons: <TwitterIcon />,
+    target: "_blank",
+    href: "https://twitter.com/sirr_nathan",
+  },
+  {
+    icons: <GithubIcon />,
+    target: "_blank",
+    href: "https://github.com/s-kvng",
+  },
   { icons: <DribbleIcon />, target: "_blank", href: "/" },
-  { icons: <LinkedInIcon />, target: "_blank", href: "/" },
+  {
+    icons: <LinkedInIcon />,
+    target: "_blank",
+    href: "https://www.linkedin.com/in/nathaniel-e-adama-93802a234/",
+  },
   // {icons : "T", target : "_blank" , href: "/" },
   // {icons : "T", target : "_blank" , href: "/" },
 ];
