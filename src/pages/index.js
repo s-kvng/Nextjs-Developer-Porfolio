@@ -16,6 +16,7 @@ import AnimatedText from "@/components/AnimatedText";
 import HireMe from "@/components/HireMe";
 import AnimatedLightbulb from "@/components/AnimatedLightbulb";
 import ShimmerButton from "@/components/magic-ui/ShimmerButton";
+import BoxReveal from "@/components/magic-ui/BoxReveal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,13 +50,16 @@ export default function Home() {
                 text={"I am a full stack developer"}
                 className=" sm:py-2 md:py-7 md:!text-6xl !text-5xl  pl-0"
               />
-              <p className="my-4 lg:my-2 text-base font-medium sm:mb-5">
-                As a skilled full-stack{" "}
-                <span className="developerText">Developer</span>, I am dedicated
-                to turning ideas into innovative web applications. Explore my
-                latest projects and articles, showcasing my expertise in
-                React.js and web development.
-              </p>
+              <BoxReveal boxColor={"#214d76"} duration={0.8}>
+                <p className="my-4 lg:my-2 text-base font-medium sm:mb-5">
+                  As a skilled full-stack{" "}
+                  <span className="developerText">Developer</span>, I am
+                  dedicated to turning ideas into innovative web applications.
+                  Explore my latest projects and articles, showcasing my
+                  expertise in React.js and web development.
+                </p>
+              </BoxReveal>
+
               <div className="flex items-center lg:self-start gap-x-4 mb-5 md:mb-0 self-center">
                 <Link
                   href="/Nathaniel-Adama.pdf"
