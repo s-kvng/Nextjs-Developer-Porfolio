@@ -15,6 +15,7 @@ import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import HireMe from "@/components/HireMe";
 import AnimatedLightbulb from "@/components/AnimatedLightbulb";
+import ShimmerButton from "@/components/magic-ui/ShimmerButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,9 +61,13 @@ export default function Home() {
                   href="/Nathaniel-Adama.pdf"
                   target={"_blank"}
                   download={true}
-                  className=" bg-gray-900 text-white text-[14px] md:text-lg font-semibold p-2 md:p-3 rounded-lg shadow-xl hover:bg-gray-800 flex items-center "
+                  className="  "
                 >
-                  Resume <LinkArrow className=" w-4 md:w-7 h-4 ml-1" />
+                  <ShimmerButton className="shadow-2xl">
+                    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                      Resume
+                    </span>
+                  </ShimmerButton>
                 </Link>
                 <Link
                   href="mailto:nathanieladama8420@gmail.com"
